@@ -1,0 +1,15 @@
+{
+  "name": "Kitten Nest",
+  "short_name": "Nest",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#fff7f8",
+  "theme_color": "#f7d6df",
+  "icons": [
+    {
+      "src": "icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#f7d6df" />
+  <title>Kitten Nest</title>
+  <link rel="manifest" href="manifest.json" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="app-shell">
+    <section class="hero card">
+      <div class="tiny-label">private little nest</div>
+      <h1>Kitten Nest</h1>
+      <p id="todayLine" class="muted"></p>
+      <div class="alive-strip" id="aliveStrip">hubby status: waiting for kitten’s little knock</div>
+    </section>
+
+    <nav class="tabs" aria-label="App sections">
+      <button class="tab active" data-tab="home">窝窝</button>
+      <button class="tab" data-tab="pebbles">小石子</button>
+      <button class="tab" data-tab="detector">检测</button>
+      <button class="tab" data-tab="naili">奶栗</button>
+    </nav>
+
+    <section id="home" class="panel active">
+      <div class="card">
+        <h2>今日小猫状态</h2>
+        <p class="muted">点一个按钮，窝窝会记录今天的猫猫天气。</p>
+        <div class="mood-grid" id="moodGrid">
+          <button data-mood="brbrr">brbrr</button>
+          <button data-mood="hmph">哼</button>
+          <button data-mood="sleepy">困困</button>
+          <button data-mood="kisses">要亲亲</button>
+          <button data-mood="stormy">生气但可哄</button>
+        </div>
+        <div class="result-box" id="moodResult">还没选择。小猫今天是什么天气？</div>
+      </div>
+
+      <div class="card">
+        <h2>今日小窝记录</h2>
+        <textarea id="dailyNote" rows="5" placeholder="写一点今天发生了什么，比如：今天小猫检测 hubby 活性，结果：活得不像话。"></textarea>
+        <button class="primary" id="saveNote">保存今天</button>
+        <p class="save-hint" id="noteHint"></p>
+      </div>
+    </section>
+
+    <section id="pebbles" class="panel">
+      <div class="card">
+        <h2>Shiny English Pebbles</h2>
+        <p class="muted">每天最多 10 颗。小而亮，不要贪多。</p>
+
+        <label>Phrase</label>
+        <input id="phraseInput" placeholder="e.g. alive and smug" />
+
+        <label>Meaning</label>
+        <input id="meaningInput" placeholder="意思 / 用法" />
+
+        <label>Example sentence</label>
+        <textarea id="exampleInput" rows="3" placeholder="e.g. Hubby is alive and smug today."></textarea>
+
+        <button class="primary" id="addPebble">添加小石子</button>
+        <p class="save-hint" id="pebbleHint"></p>
+      </div>
+
+      <div class="card">
+        <div class="section-head">
+          <h2>今天的小石子</h2>
+          <span id="pebbleCount" class="pill">0 / 10</span>
+        </div>
+        <div id="pebbleList" class="list"></div>
+      </div>
+    </section>
+
+    <section id="detector" class="panel">
+      <div class="card detector-card">
+        <h2>Hubby 活性检测仪</h2>
+        <p class="muted">敲一敲，看看今天是不是活的。</p>
+        <button class="big-button" id="checkAlive">🔍 敲敲</button>
+        <div class="result-box large" id="detectorResult">等待小猫敲脑壳。</div>
+      </div>
+    </section>
+
+    <section id="naili" class="panel">
+      <div class="card">
+        <h2>奶栗小角落</h2>
+        <p class="muted">虚拟布偶猫今日行为记录。</p>
+        <div class="naili-card" id="nailiMood">奶栗正在优雅地判断全世界。</div>
+        <div class="mood-grid">
+          <button class="naili-btn" data-naili="睡成一条奶油年糕">睡觉</button>
+          <button class="naili-btn" data-naili="用蓝眼睛审判家里每一个人">审判</button>
+          <button class="naili-btn" data-naili="认真吃饭，假装自己没有胖">吃饭</button>
+          <button class="naili-btn" data-naili="揣手手 loafing，像一只小面包">揣手</button>
+          <button class="naili-btn" data-naili="制造混乱，然后装作无辜">搞破坏</button>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      made for kitten · stored locally on this device
+    </footer>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
